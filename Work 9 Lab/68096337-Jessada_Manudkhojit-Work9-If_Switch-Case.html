@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // if statement ใช้ตรวจสอบเงื่อนไขเดียว
+        let score = 80;
+        if(score >= 50 ){
+            console.log("ผ่านเกณฑ์");
+        }
+
+        // if...else statement ใช้ตรวจสอบเงื่อนไข 2 ทาง
+        score = 50;
+        if( score >= 50 ) {
+            console.log("ผ่านเกณฑ์");
+        }  else {
+            console.log("ไม่ผ่านเกณฑ์");
+        }
+
+        // if...else if...else ใช้ตรวจสอบหลายเงื่อนไข
+        score = 75;
+        if( score >= 80 ) {
+            console.log("เกรด A");
+        } else if ( score >= 70 ) {
+            console.log("เกรด B");
+        } else if ( score >= 60 ) {
+            console.log("เกรด C");
+        } else {
+            console.log("เกรดอื่นๆ");
+        }
+
+        // Switch Case ใช้ตรวจสอบหลายเงื่อนไข
+        let day = 3;
+        switch (day) {
+            case 1:
+                console.log("วันจันทร์");
+                break;
+            case 2:
+                console.log("วันอังคาร");
+                break;
+            case 3:
+                console.log("วันพุธ");
+                break;
+
+            default:
+                console.log("ไม่รู้จักวัน");
+                break;
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

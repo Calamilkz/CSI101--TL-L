@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>กรอกตัวเลขแล้วคั่นด้วยลูกน้ำตามจำนวนที่ต้องการ</p>
+    <input type="text" id="num" placeholder="กรอกตัวเลข เช่น 1,2,3">
+    <button onclick="SortEven()">submit</button>
+    <p id="result"></p>
+
+    <script>
+        function SortEven() {
+            let num = document.getElementById("num").value;
+            let sortarray = num.split(',');
+            let outputarray = [];
+
+            for (let i = 0; i < sortarray.length; i++) {
+                let n = sortarray[i];
+                if (n % 2 === 0) {
+                    outputarray.push(n);
+                }
+            }
+            document.getElementById("result").innerHTML = `<p>${outputarray.join(', ')}</p>` ; 
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+</head>
+<body>
+    <div>
+        <label for="">Input จำนวนที่ต้องการสร้าง Password</label> 
+        <input type="number" id="num">
+    </div>
+    <div>
+        <button onclick="showPassword()">OK</button>
+    </div>
+    <label id="result"></label>
+
+    <script>
+        function generatePassword(length) {
+            let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%^&*()_+";
+            let result = "";
+            for (let i = 0; i < length; i++) {
+                let index = Math.floor(Math.random() * chars.length);
+                result += chars.charAt(index);
+            }
+            return result;
+        }
+
+        function showPassword() {
+            const ra = document.getElementById("num");
+            const out = document.getElementById("result");
+            let length = parseInt(ra.value);
+
+            if (isNaN(length) || length <= 0) {
+                out.innerHTML = "กรุณากรอกจำนวนที่ถูกต้อง";
+            } else {
+                out.innerHTML = generatePassword(length);
+            }
+        }
+    </script>
+</body>
+</html>

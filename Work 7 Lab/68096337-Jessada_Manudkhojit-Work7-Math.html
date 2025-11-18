@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1.ค่าคงที่คณิตศาสตร์
+        console.log(Math.PI);       // 3.14159...
+        console.log(Math.E);        // 2.71828...
+        console.log(Math.SQRT2);    // 1.4141....
+        // 2.ปัดเศษขึ้น
+        console.log(Math.round(4.6)); // 5 (ปัดขึ้นตามหลักเศษ)
+        console.log(Math.floor(4.9)); // 4 (ปัดลง)
+        console.log(Math.ceil(4.1));  // 5 (ปัดขึ้น)
+        console.log(Math.trunc(4.9)); // 4 (ตัดเศษ)  
+        // 3.ค่าบวก/ลบ/กำลัง
+        console.log(Math.abs(-15)); // 15
+        console.log(Math.pow(2,5)); // 32
+        console.log(Math.sqrt(81)); // 9
+        // 4.ค่ามากสุด/น้อยสุด
+        console.log(Math.max(10,20,5)); // 20
+        console.log(Math.min(10,20,5)); // 5
+        // 5.การสุ่ม
+        console.log(Math.random()); // 0 - 1
+        // สุ่มเลข 1-100
+        console.log(Math.floor(Math.random() * 100) + 1);
+        // 6.ฟังก์ชั่นตรีโกณมิติ
+        console.log(Math.sin(Math.PI / 2)); // 1
+        console.log(Math.cos(0));           // 1
+        console.log(Math.tan(Math.PI / 4)); // 1
+
+        let text = "Hello JavaScript";
+        // 1.ความยาว
+        console.log(text.length); // 16
+        // 2.การเปลี่ยนตัวอักษร
+        console.log(text.toUpperCase()); // HELLO JAVASCRIPT
+        console.log(text.toLowerCase()); // hello javascript
+        // 3.การค้นหา
+        console.log(text.indexOf("Java"));      // 6
+        console.log(text.includes("Script"));   // true
+        console.log(text.startsWith("Hello"));  // true
+        console.log(text.endsWith("World"));    // false
+        // 4.การตัดข้อความ
+        console.log(text.slice(6,10));      // Java
+        console.log(text.substring(0,5));   // Hello
+        console.log(text.substr(6,4));      // Java (deprecated แต่ยังเจอ) ปล.จะเลิกใช้แล้ว
+        // 5.แทนที่
+        console.log(text.replace("JavaScript", "World")); // Hello World
+        // 6.การแบ่งข้อความ
+        let  fruits = "apple,banana,orenge" ;
+        console.log(fruits.split(",")); // ["apple","banana","orenge"]
+        // 7.การ trim
+        let messy = "    Space text     " ;
+        console.log(messy.trim()); // "Space text"
+        // 8.การเข้าถึงตัวอักษร
+        console.log(text.charAt(0));    // H
+        console.log(text[1]);           // e
+
+        </script>
+</head>
+<body>
+    
+</body>
+</html>

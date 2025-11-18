@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตรวจสอบสิทธิ์ เลือกตั้ง</title>
+</head>
+<body>
+    <input type="number" name="" id="Age" placeholder="กรอกอายุ">
+    <button onclick="agecondition()" type="submit">ตกลง</button>
+    <h2 id="result"></h2>
+    <script>
+        function agecondition() {
+            let age = parseInt(document.getElementById("Age").value)
+            if (age >= 18 ) {
+                document.getElementById("result").innerText = "มีสิทธิ์เลือกตั้ง";
+            } else {
+                document.getElementById("result").innerText = "ไม่มีสิทธิ์เลือกตั้ง";
+            }
+        }
+    </script>
+</body>
+</html>

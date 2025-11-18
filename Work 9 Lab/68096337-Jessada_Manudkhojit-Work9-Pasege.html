@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">เลือกประเภทการเดินทาง</label>
+    <select name="" id="Fair">
+        <option value="Bus">รถเมล์</option>
+        <option value="Train">รถไฟฟ้า</option>
+        <option value="Taxi">รถแท็กซี่</option>
+    </select>
+    <button onclick="Caltravle()">ตกลง</button>
+    <h2 id="result"></h2>
+    <script>
+        function Caltravle() {
+            let Car = document.getElementById("Fair").value;
+            switch (Car) {
+                case "Bus" :
+                    document.getElementById("result").innerText = "รถเมล์ = 15 บาท";
+                    break;
+                case "Train" :
+                    document.getElementById("result").innerText = "รถไฟฟ้า = 40 บาท";
+                    break;
+                case "Taxi" :
+                    document.getElementById("result").innerText = "รถแท็กซี่ = 50 บาท";
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

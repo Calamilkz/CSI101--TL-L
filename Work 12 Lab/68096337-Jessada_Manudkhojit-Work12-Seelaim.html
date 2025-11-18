@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calculateRectangleArea(width,height) {
+            Area = height * width;
+            return Area
+        }
+
+        console.log(calculateRectangleArea(5,5));
+
+        function isEven(number){
+            if (number % 2 === 0) {
+                return "Even" ;
+            } else {
+                return "Odd" ;
+            }
+        }
+        console.log(isEven(5));
+        console.log(isEven(0));
+
+        function sumArray(numbers) {
+            let sum = 0 ;
+            for (let i = 0; i < numbers.length; i++) {
+                sum += numbers[i];
+            }
+            return sum;
+        }
+        console.log(sumArray([1,2,3,4,5]));
+
+        const square = (n) => Math.pow(n,2);
+        console.log(square(3));
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>

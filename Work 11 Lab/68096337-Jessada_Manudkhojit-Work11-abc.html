@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="num" type="num" placeholder="กรอกจำนวน">
+    <button onclick="Calculate()">Submit</button>
+    <p id="result"></p>
+
+    <script>
+        function Calculate() {
+            let num = parseInt(document.getElementById("num").value);
+            let numstring = "";
+
+            for (let i = 1; i <= num; i++){
+                numstring += i;
+            }
+
+            document.getElementById("result").innerText += numstring ;
+        }
+    </script>
+</body>
+</html>

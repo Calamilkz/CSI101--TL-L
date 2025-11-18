@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .redText{color:red;}
+        .blueText{color:blue;}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <p id="myTag">นี่คือ Tag p</p>
+    </div>
+    <button onclick="changeTag()">เปลี่ยนเป็น h2</button>
+    <script>
+        function changeTag(){
+            let oldElement = document.getElementById("myTag");
+            let newElement = document.createElement("h2");
+            newElement.id = "myTag";
+            newElement.innerText = "ตอนนี้เปลี่ยนเป็นแท็ก h2 แล้ว!";
+            oldElement.replaceWith(newElement); //แทนที่
+        }
+    </script>
+
+    <p id="myText" class="redText">ข้อความนี้เริ่มต้นเป็นสีแดง</p>
+    <button onclick="changeclass()">เปลี่ยน Class</button>
+    <script>
+        function changeclass(){
+            let element = document.getElementById("myText");
+            element.className ="blueText";
+        }
+    </script>
+
+    <p id="oldId">ข้อความนี้มี Id = oldId</p>
+    <button onclick="changeId()">เปลี่ยน ID</button>
+    <script>
+        function changeId(){
+            let element = document.getElementById("oldId");
+            element.id = "newId";
+            element.innerText = "ตอนนี้ Id ถูกเปลี่ยนเป็น newId แล้ว!";
+        }
+    </script>
+
+    <h2>การทดสอบลำดับความสำคัญของตัวดำเนินการ</h2>
+    <pre id="output"></pre>
+    <script src="Script.js"></script>
+</body>
+</html>

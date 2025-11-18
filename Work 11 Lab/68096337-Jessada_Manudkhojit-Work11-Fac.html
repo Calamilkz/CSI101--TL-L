@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="num" type="num" placeholder="กรอกจำนวน">
+    <button onclick="Factorial()">Submit</button>
+    <p id="result"></p>
+
+    <script>
+        function Factorial(n) {
+            let num = parseInt(document.getElementById("num").value);
+            let boxr = 1;
+
+            for (let i = 1;i <= num;i++) {
+                boxr = boxr * i;
+            }
+            document.getElementById("result").innerText = boxr;
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="68096337" content="width=device-width, initial-scale=1.0">
+    <title>รวมเลข</title>
+</head>
+<body>
+    <h1>กรอกตัวเลขเพื่อเก็บค่า กรอก 0 เพื่อเริ่มคำนวณ</h1>
+    <input type="number" id="Num" placeholder="กรอกเลข" >
+    <button onclick="SumNum()">เก็บค่า</button>
+    <p id="result"></p>
+    <script>
+        let array = [];
+
+        function SumNum() {
+            let Inputclear = document.getElementById("Num");
+            let num = parseInt(document.getElementById("Num").value);
+            document.getElementById("result").innerHTML = "";
+
+            if (num === 0) {
+                let i = 0;
+                let sum = 0;
+                document.getElementById("result").innerHTML += `<p>ตัวเลขทั้งหมด : ${array}</p>`;
+                while (i < array.length) {
+                    sum += array[i];           
+                    i++;
+                }
+                Inputclear.value = "";
+                document.getElementById("result").innerHTML += `<p>ผลรวม = ${sum}</p>`;
+            } else {
+            array.push(num);
+            Inputclear.value = "";
+            document.getElementById("result").innerText = "เก็บค่าแล้ว!";
+            }
+        }
+    </script>
+</body>
+</html>

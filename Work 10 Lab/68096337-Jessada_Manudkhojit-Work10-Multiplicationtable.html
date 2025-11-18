@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="68096337" content="width=device-width, initial-scale=1.0">
+    <title>สูตรคูณ</title>
+</head>
+<body>
+    <h1>หาแม่สูตรคูณ</h1>
+    <input id="Mea" type="number" placeholder="กรอกเลข">
+    <button onclick="Soodkoon()">หาสูตรคูณ</button>
+    <p id="result"></p>
+
+    <script>
+        function Soodkoon() {
+            document.getElementById("result").innerHTML = "";
+            let mea = parseInt(document.getElementById("Mea").value);
+            let i = 1;
+
+            do { 
+                document.getElementById("result").innerHTML += `<p>${mea} × ${i} = ${mea * i}</p>`;
+                i++
+            } while (i <= 12);
+        }
+    </script>
+</body>
+</html>
