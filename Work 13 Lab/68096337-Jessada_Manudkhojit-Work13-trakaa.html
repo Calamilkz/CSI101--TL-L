@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>คุณมีตะกร้าอยู่ 1 ใบที่จุผลไม้ได้ 5 อย่าง หากเพิ่มผลไม้เข้าไป ผลไม้ตัวแรกจะหล่นออกจากตะกร้า</h2>
+    <input type="text" name="" id="Ponnlamai" placeholder="กรอกผลไม้">
+    <button onclick="trakaa()">ลงตะกร้า</button>
+    <p id="result"></p>
+    <script>
+        let Current = ["apple","banana","mango","orange","grape"];
+
+        function trakaa() {
+            let ponnmai = document.getElementById("Ponnlamai").value;
+            Current.push(ponnmai);
+            let luang = Current.shift();
+            document.getElementById("result").innerHTML = `<p>อุ้ย! ${luang} ล่วง ตอนนี้ในตะกร้าเหลือ ${Current}</p>`;
+        }
+    </script>
+</body>
+</html>

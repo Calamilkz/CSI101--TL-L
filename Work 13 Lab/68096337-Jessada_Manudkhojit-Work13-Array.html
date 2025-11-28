@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //งานที่ 2
+        let num = [12, 45, 7, 23, 89, 34];
+        let newv = 0;
+        function cal() {
+            for (let i = 0;i <= num.length;i++) {
+                for (let l = 0; l <= num.length;l++) {
+                    if (num[l] > num[i]) {
+                        newv = num[l] ;
+                    }
+                }
+            }
+            return newv ;
+        }
+        cal();
+        console.log(newv);
+
+        //งานที่ 3
+        let scores = [55, 72, 90, 45, 68, 81];
+        const sFilter = scores.filter(a => {
+            return a > 60 ;
+        })
+        const sMap = scores.map(a => {
+            if (a > 60) {
+                return "ผ่าน";
+            }
+            return "ไม่ผ่าน";
+        }) 
+        console.log(sFilter);
+        console.log(sMap);
+
+        //งานที่ 4
+        let crate = [5, 2, 9, 1, 7];
+        const csort = crate.sort((a,b) => a-b);
+        const csum = crate.reduce((c,d) => {
+            return c + d ;
+        })
+        console.log(csort);
+        console.log(csum);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
